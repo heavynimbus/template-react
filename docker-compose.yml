@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  template-react-development:
+    container_name: template-react-development
+    build:
+      context: .
+      target: development
+    restart: always
+    image: template-react:dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+
+  template-react-production:
+    container_name: template-react-production
+    build:
+      context: .
+    restart: always
+    image: template-react:prod
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/templates/default.conf.template

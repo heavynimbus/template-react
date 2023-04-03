@@ -1,0 +1,16 @@
+.Counter {
+
+  > h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+  }
+
+  > div {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
